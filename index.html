@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tetris</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h1>Tetris</h1>
+
+    <div id="gameWrapper" style="display:flex; gap:20px; align-items:flex-start;">
+        <!-- Canvas principal del juego -->
+        <canvas id="gameCanvas" width="200" height="400"></canvas>
+
+        <!-- Panel derecho: siguiente pieza y puntuación -->
+        <div style="color:white;">
+            <h2>Siguiente</h2>
+            <canvas id="nextCanvas" width="80" height="80" style="border:1px solid #fff;"></canvas>
+
+            <h2>Puntuacion</h2>
+            <div id="score">0</div>
+            <div id="levelMessage" style="margin-top:20px; font-size:16px; color:yellow;"></div>
+                    <!-- Botón volver a jugar para móvil -->
+            <button id="restartBtn" style="display:none; margin-top:15px; padding:10px 20px; font-size:18px; cursor:pointer;">
+                Volver a jugar
+            </button>
+        </div>
+    </div>
+
+    <!-- CONTROLES PARA MÓVIL -->
+    <div id="mobileControls">
+        <button class="btn-touch" data-action="left">◀️</button>
+        <button class="btn-touch" data-action="rotate">🔄</button>
+        <button class="btn-touch" data-action="right">▶️</button>
+        <button class="btn-touch" data-action="down">⬇️</button>
+        <button class="btn-touch" data-action="drop">⏬</button>
+    </div>
+
+    <!-- CONTROLES PARA PC -->
+    <div id="pcControls">
+        <p><b>Controles:</b>  
+            ← Izquierda — → Derecha — ↓ Bajar — ↑ Girar — Espacio = Caida rapida
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
