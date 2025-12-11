@@ -154,7 +154,7 @@ function clearLines() {
         // FUENTE SIEMPRE ARIAL
         levelMessage.style.fontFamily = "Arial";
 
-        // MENSAJES
+        // MENSAJES SEGÚN PUNTUACIÓN
         if(score >= 500 && score < 1000) {
             levelMessage.style.fontStyle = "normal";
             levelMessage.textContent = "Pulp Fiction";
@@ -179,40 +179,33 @@ function clearLines() {
             levelMessage.style.fontStyle = "normal";
             levelMessage.textContent = "...";
         }
-        else if(score >= 5000) {
+        else if(score >= 5000 && score < 8000) {
             levelMessage.style.fontStyle = "normal";
             levelMessage.textContent = "enhorabuena";
         }
-    }
-    
-}
-        else if(score >= 8000) {
+        else if(score >= 8000 && score < 10000) {
             levelMessage.style.fontStyle = "normal";
             levelMessage.textContent = "dejame descansar";
         }
-    
-}
-        else if(score >= 10000) {
+        else if(score >= 10000 && score < 15000) {
             levelMessage.style.fontStyle = "normal";
             levelMessage.textContent = "Pablo eres muy pesado";
         }
-        
-        }
-        else if(score >= 15000) {
+        else if(score >= 15000 && score < 25000) {
             levelMessage.style.fontStyle = "normal";
             levelMessage.textContent = "No se me ocurre nada mas, dimito";
         }
-    
-    else if(score >= 25000) {
+        else if(score >= 25000 && score < 50000) {
             levelMessage.style.fontStyle = "normal";
             levelMessage.textContent = "Empiezo a preocuparme";
         }
-        
         else if(score >= 50000) {
             levelMessage.style.fontStyle = "normal";
             levelMessage.textContent = "Te pido cita en el psiquiatra, va";
         }
-    
+
+    }
+}
 
 function rotate(piece) {
     const shape = piece.shape;
