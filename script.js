@@ -184,7 +184,35 @@ function clearLines() {
             levelMessage.textContent = "enhorabuena";
         }
     }
+    
 }
+        else if(score >= 8000) {
+            levelMessage.style.fontStyle = "normal";
+            levelMessage.textContent = "dejame descansar";
+        }
+    
+}
+        else if(score >= 10000) {
+            levelMessage.style.fontStyle = "normal";
+            levelMessage.textContent = "Pablo eres muy pesado";
+        }
+        
+        }
+        else if(score >= 15000) {
+            levelMessage.style.fontStyle = "normal";
+            levelMessage.textContent = "No se me ocurre nada mas, dimito";
+        }
+    
+    else if(score >= 25000) {
+            levelMessage.style.fontStyle = "normal";
+            levelMessage.textContent = "Empiezo a preocuparme";
+        }
+        
+        else if(score >= 50000) {
+            levelMessage.style.fontStyle = "normal";
+            levelMessage.textContent = "Te pido cita en el psiquiatra, va";
+        }
+    
 
 function rotate(piece) {
     const shape = piece.shape;
